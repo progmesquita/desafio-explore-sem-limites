@@ -1,0 +1,261 @@
+/* Configurações */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --color-card: #fff;
+    --color-header: #B52184;
+    --color-paragraph: #312D64;
+    --color-bg: #F9F4FB;
+}
+
+body {
+    background: var(--color-bg);
+}
+
+body, input, textarea {
+    font-size: 1.6rem;
+}
+
+html, body, input, textarea {
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+    color: var(--color-paragraph);
+}
+
+h1, h2, legend {
+    font-family: "Mulish", sans-serif;
+    font-weight: 900;
+    color: var(--color-header);
+}
+
+/* Personalização */
+
+main {
+    text-align: center;
+}
+
+main > img {
+    width: min(36.4em, 100%);
+    padding-inline: 3.2rem;
+}
+
+.content-text h1 {
+    font-size: clamp(3.2rem, 1vw + 3rem, 5.8rem);
+}
+
+.content-text p {
+    font-size: clamp(2rem, 1vw + 2rem, 3.2rem);
+}
+
+.intro-wrapper {
+    margin-block: 1.7rem;
+}
+
+main > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 5.9rem;
+    height: 10.5rem;
+    margin-block: 3.5rem 9.3rem;
+
+    background: transparent;
+    border: 4px solid var(--color-header);
+    border-radius: 76rem;
+
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    padding: 5.5rem 3.9rem;
+    background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+}
+
+figure {
+    max-width: 36.6rem;
+
+    padding: 2.7rem;
+    background: var(--color-bg);
+    border-radius: 2rem;
+}
+
+figure > img {
+    width: 8rem;
+}
+
+figcaption {
+    max-width: 59.2rem;
+}
+
+figcaption h2 {
+    font-size: clamp(3rem, 1vw + 2.7rem, 3.5rem);
+    margin-block: 3rem 5px;
+}
+
+figcaption p {
+    font-size: clamp(1.6rem, 1vw + 1rem, 2rem);
+}
+
+form {
+    max-width: 59.2rem;
+    margin: auto;
+    margin-block: 7.8rem 6.5rem;
+    padding-inline: 4rem;
+}
+
+.form-wrapper > img {
+    display: none;
+}
+
+input, textarea {
+    border: 1px solid var(--color-paragraph);
+    border-radius: 1.6rem;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    border: 0;
+}
+
+fieldset legend {
+    margin-bottom: 4.3rem;
+    font-size: 3.2rem;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper label {
+    position: absolute;
+    top: calc(50% - 1rem);
+    left: 20px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding-block: 1.6rem;
+    padding-left: 5rem;
+
+    color: var(--color-paragraph);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--color-paragraph);
+}
+
+textarea {
+    height: 12.6rem;
+
+    padding: 1.6rem;
+}
+
+fieldset button {
+    width: 16rem;
+    padding: 1.1rem 1.6rem;
+
+    background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: var(--color-card);
+
+    border: 0;
+    border-radius: 1.6rem;
+    cursor: pointer;
+}
+
+footer {
+    padding-block: 3.2rem;
+
+    background: var(--color-paragraph);
+    text-align: center;
+}
+
+footer p {
+    font-size: 2rem;
+    color: var(--color-bg);
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "B A"
+        "C A";
+
+        align-items: end;
+
+        width: min(121.8rem, 90%);
+        margin-bottom: 10.3rem;
+        margin-inline: auto;
+    }
+
+    main > img {
+        padding: 0;
+        grid-area: A;
+    }
+
+    .intro-wrapper {
+        text-align: start;
+        margin: 0;
+    }
+
+    main > a {
+        margin: 0;
+    }
+
+    section {
+        gap: 6rem;
+        flex-direction: row;
+        align-items: unset;
+
+        padding-inline: 2rem;
+    }
+
+    figure > img {
+        width: 9.7rem;
+    }
+
+    form {
+        min-width: min(121.8rem, 90%);
+        margin-block: 0;
+        padding: 0;
+    }
+
+    .form-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: unset;
+    }
+
+    .form-wrapper > img {
+        display: block;
+        overflow: hidden;
+    }
+
+    fieldset {
+        width: 59.2rem;
+        margin-block: 1.4rem;
+    }
+}
